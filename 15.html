@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Convert Text</title>
+		<script type="text/javascript">
+			function changeCase()
+			{
+				var case1=document.getElementById("inputbox").value.toUpperCase();
+				document.getElementById("inputbox").value=case1;
+			}
+		</script>
+	</head>
+	<body>
+		<label>Enter Text: </label>
+		<input type="text" id="inputbox" value="">
+		<input type="button" value="Convert To Uppercase" onclick="changeCase()"/>
+	</body>
+</html>
+
