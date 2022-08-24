@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mouse Events</title>
+	<script type="text/javascript">
+		function mouseOver()
+		{
+			document.getElementById("image1").src="image3.jpg";
+		}
+		function mouseOut()
+		{
+			document.getElementById("image1").src="image1.jpg";
+		}
+	</script>
+	<style>
+		#image1
+		{
+			height=350px;
+			width=350px;
+		}
+	</style>
+	</head>
+	<body>
+		<img src="image1.jpg" alt="image" align="middle" id="image1" onmouseover="mouseOver()" onmouseout="mouseOut()">
+	</body>
+</html>
