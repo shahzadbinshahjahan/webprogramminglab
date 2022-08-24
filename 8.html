@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Employee Portal</title>
+	</head>
+	<body>
+		<center><h1>Employee Salary Details</center></h1>
+		<h2>Enter Employee details below : </h2>
+		<form name="form1">
+			<label>Employee name : </label>
+			<input type="text" value="" name="empname"/>
+			<br/>
+			<label>Department : </label>
+			<input type="text" value="" name="dept"/>
+			<br/>
+			<label>Basic Pay : </label>
+			<input type="text" value="" name="pay"/>
+			<input type="button" value="Calculate Net Salary" onclick="calculateSalary()"/>
+		</form>
+
+	<script>
+		function calculateSalary()
+		{
+			var empname=document.form1.empname.value;
+			var dept=document.form1.dept.value;
+			var pay=parseInt(document.form1.pay.value);
+			var da=pay*0.5;
+			var har=pay*0.15;
+			var gross=pay+da+har;
+			var pf=gross*0.12;
+			var tax=gross*0.1;
+			var netpay=gross-(pf+tax);
+			document.write("<h1>Employee Salary Details </h1><br/>");
+			document.write("Employee name : "+empname+"<br/>");
+			document.write("Departmet : "+dept+"<br/>");
+			document.write("Basic Pay : "+pay+"<br/>");
+			document.write("Dearness Allowance : "+da+"<br/>");
+			document.write("House rent Allowance : "+har+"<br/>");
+			document.write("Gross Pay : "+gross+"<br/>");
+			document.write("PF : "+pf+"<br/>");
+			document.write("Tax : "+tax+"<br/>");
+			document.write("<b>Net Salary : "+netpay+"</b>");
+		}
+	</script>
+	</body>
+</html>
