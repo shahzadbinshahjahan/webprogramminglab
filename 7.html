@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student result<title>
+
+			<script type="text/javascript">
+				function calculateMarks()
+				{
+					var phy=parseInt(document.form1.physics.value);
+					var mat=parseInt(document.form1.maths.value);
+					var eng=parseInt(document.form1.english.value);
+					var lang=parseInt(document.form1.language.value);
+					var comp=parseInt(document.form1.computerscience.value);
+					var chem=parseInt(document.form1.chemistry.value);
+					var total=phy+mat+eng+lang+comp+chem;
+					var avg=Math.round(total/6);
+					var result="",grade="";
+					if(phy<40 || mat<40 || eng<40 || lang<40 || comp<40 || chem<40 )
+					{
+						grade="F";
+						result="Fail";
+					}
+					else if(avg>90)
+					{
+						grade="A";
+						result="Exemplary";
+					}
+					else if(avg>80)
+					{
+						grade="B+";
+						result="Distinction";
+					}
+					else if(avg>70)
+					{
+						grade="B";
+						result="First Class";
+					}
+					else if(avg>60)
+					{
+						grade="C+"
+						result="Second Class";
+					}
+					else if(avg>50)
+					{
+						grade="D";
+						result="Pass";
+					}
+					else
+					{
+						grade="F";
+						result="Fail";
+					}
+					document.write("<br/><br/> --------------------- <br/>");
+					document.write("<br/> ------ RESULTS ---------- <br/>");
+					document.write("<br>-------------------------- <br/>");
+					document.write("Student Name : <b>"+document.form1.studentname.value+"</b><br/>");
+					document.write("Total Marks : <b>"+total+"</b><br/>");
+					document.write("Grade : <b>"+grade+"</b><br/>");
+					document.write("Result : <b>"+result+"</b><br/>");
+					document.write("-------------------------------");
+				}
+			</script>
+			
+	</head>
+	
+	<body>
+		<h1>Student Information</h2><br/><br/>
+		<h1>Please fill in the Details : </h1>
+		<br/>
+		<form name="form1">
+			<label>Student Name: </label>
+			<input type="text" value="" name="studentname"></br>
+			<label>Physics : </label>
+			<input type="text" value="" name="physics"></br>
+			<label>Maths : </label>
+			<input type="text" value="" name="maths"></br>
+			<label>English : </label>
+			<input type="text" value="" name="english"></br>
+			<label>Language : </label>
+			<input type="text" value="" name="language"></br>
+			<label>Computer Science : </label>
+			<input type="text" value="" name="computerscience"></br>
+			<label>Chemistry : </label>
+			<input type="text" value="" name="chemistry"></br>
+			<input type="submit" onclick="calculateMarks()">
+		</form>
+	</body>	
+	
+</html>
+
