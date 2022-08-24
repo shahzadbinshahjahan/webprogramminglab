@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Car Objects</title>
+	<script type="text/javascript">
+		class Car {
+			constructor(newmake, newmodel, newyear) {
+				this.make = newmake;
+				this.model = newmodel;
+				this.year = newyear;
+			}
+			display() {
+				console.log(this.make);
+				document.write("<p>Car make : " + this.make + "</p><br/>");
+				document.write("<p>Car model : " + this.model + "</p><br/>");
+				document.write("<p>Car year : " + this.year + "</p><br/>");
+			}
+		}
+		document.write("<p>Details of Car </p><br/> <br/>");
+		ford = new Car("Ford", "Fusion", "2015");
+		toyota = new Car("Toyota", "Innova", "2020");
+		ford.display();
+		toyota.display();
+
+	</script>
+</head>
+
+<body></body>
+
+</html>
