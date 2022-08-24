@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dynamic effect</title>
+	<script type="text/javascript">
+		var num=10;
+		function toTop(newTop)
+		{
+			document.getElementById(newTop).style.zIndex=num;
+			num++;
+		}
+	</script>
+	<style type="text/css">
+	#image1
+	{
+		height:350px;
+		width:350px;
+		position:absolute;
+		top:10px;
+		left:10px;
+		z-index:0;
+	}
+	#image2
+	{
+		height:350px;
+		width:350px;
+		position:absolute;
+		top:300px;
+		left:300px;
+		z-index:0;
+	}
+	#image3
+	{
+		height:350px;
+		width:350px;
+		position:absolute;
+		top:600px;
+		left:600px;
+		z-index:0;
+	}
+	</style>
+	</head>
+	<body>
+		<img src="image1.jpg" id="image1" alt="image" onclick="toTop('image1')"/>
+		<img src="image2.jpg" id="image2" alt="image" onclick="toTop('image2')"/>
+		<img src="image3.jpg" id="image3" alt="image" onclick="toTop('image3')"/>
+	</body>
+</html>

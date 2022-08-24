@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Verification</title>
+	<script type="text/javascript">
+		function verify()
+		{
+			if(document.form1.Name.value=="")
+			{
+				window.alert("Please enter name");
+				document.form1.Name.focus();
+				return false;
+			}
+			if(document.form1.email.value=="")
+			{
+				window.alert("Please enter email");
+				document.form.email.focus();
+				return false;
+			}
+			if(document.form1.phone.value=="")
+			{
+				window.alert("Please enter phone number");
+				document.form1.phone.focus();
+				return false;
+			}
+			window.alert("Everything correct");
+			return true;
+		}
+	</script>
+		<body>
+			<center><h2>Contact Form</h2></center>
+			<form name="form1">
+				<table>
+					<tr>
+						<td>Name</td>
+						<td><input type="text" value="" name="Name">
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><input type="text" value="" name="email">
+					</tr>
+					<tr>
+						<td>Phone number </td>
+						<td><input type="text" value="" name="phone">
+					</tr>
+					<tr colspan="2">
+						<td><input type="submit" onclick="verify()">
+					</tr>
+				</table>
+			</form>
+		</body>
+</html>
+
+

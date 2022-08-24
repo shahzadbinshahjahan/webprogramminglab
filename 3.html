@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maths</title>
+	<script type="text/javascript">
+		function Calc()
+		{
+			document.form1.result.value=eval(document.form1.inpexp.value);
+		}
+	</script>
+	<body>
+		<form name="form1">
+			<h5>Enter a mathematical expression in the text box and click on the calculate button to display the result</h5>
+			<table>
+				<tr>
+					<td><input type="text" value="" name="inpexp"></td>
+					<td><input type="button" value="Calculate" name="calculate" onclick="Calc()"></td>
+				</tr>
+				<tr>
+					<td><input type="text" value="" name="result"></td>
+					<td><input type="reset" value="Reset" name="reset"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form elements</title>
+	<script type="text/javascript">
+		      function countElements()
+		      {
+			      alert("The number of elements in the form are "+document.form1.length);		      }
+	</script>
+	</head>
+	
+	<body>
+		<form name="form1">
+		<pre>
+		First name: <input type="text" name="firstname" value=""/>
+		Last name: <input type="text" name="lastname" value=""/>
+		<b>Gender :</b>
+		<input type="radio" name="gender" value="male">Male
+		<input type="radio" name="gender" value="female">Female
+		<input type="radio" name="gender" value="other">Others
+		<b>Education : </b>
+		<input type="checkbox" name="education" value="UG">Under Graduate
+		<input type="checkbox" name="education" value="G">Graduate
+		<input type="checkbox" name="education" value="PG">Post Graduate
+		</pre>
+		<input type="submit" value="submit" onclick="countElements()"/>
+		</form>
+	</body>
+</html>
+
+
+		
+
