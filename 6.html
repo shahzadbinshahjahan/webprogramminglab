@@ -1,2 +1,29 @@
 <!DOCTYPE html>
+<html>
+	<head>
+		<title>Current Date</title>
+	<script type="text/javascript">
+		var dnames=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+		var mnames=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+		var d=new Date();
+		var currentDay=d.getDay();
+		var currentMonth=d.getMonth();
+		var currentYear=d.getYear();
+		var currentDate=d.getDate();
+		var superscript="";
+		if(currentDate==1 || currentDate==21 || currentDate==31)
+			superscript="st";
+		else if(currentDate==2 || currentDate==22)
+			superscript="nd";
+		else if(currentDate==3 || currentDate==23)
+			superscript="rd";
+		else
+			superscript="th";
+		document.write("<h1><center>"+dnames[currentDay]+" "+currentDate+"<sup>"+superscript+" </sup>"+mnames[currentMonth]+" , "+currentYear+"</center></h1>");
+	</script>
+	</head>
+	<body bgcolor="lightblue">
+	</body>
+</html>
 
+		
