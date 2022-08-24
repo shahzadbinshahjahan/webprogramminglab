@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Restaurant Menu</title>
+	</head>
+	<body bgcolor="grey">
+		<br/><br/><br/>
+		<form name="form1">
+		<table border="2" bgcolor="lightblue">
+			<tr>
+				<td colspan="3"><center><h1>Restaurant Menu</h1></center></td>
+			</tr>
+			<tr>
+				<td>Starters</td>
+				<td>Main Course</td>
+				<td>Soft Drinks</td>
+			</tr>
+			<tr>
+				<td>
+				<select id="starter" size="4" multiple="multiple">
+					<option value="100">Veg pulao</option>
+					<option value="150">Jeera Rice</option>
+					<option value="120">Curry and Roti</option>
+					<option value="250">Peri Peri Fries</option>
+				</select>
+				</td>
+				<td>
+					<select id="maincourse" size="4" multiple="multiple">
+						<option value="350">Chicken Biriyani</option>
+						<option value="600">Mutton Biriyani</option>
+						<option value="200">Veg Biriyani</option>
+						<option value="250">Chicken curry and Roti</option>
+					</select>
+				</td>
+				<td>
+					<select id="softdrink" size="4" multiple="multiple">
+						<option value="20">Coke</option>
+						<option value="20">Pepsi</option>
+						<option value="10">Tea</option>
+						<option value="15">Lime</option>
+				</td>
+			<tr>
+				<td colspan="3">
+					<textarea rows="10" cols="70" id="display"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="Find Total" onclick="findTotal()"/>
+				</td>
+				<td>
+					<input type="reset" value="Reset"/>
+				</td>
+			</tr>
+		</table>
+		</form>
+	<script>
+		function findTotal()
+		{
+			var selecteditem="Item \t \t \t \t Price \n-------------------------------------\n";
+			var starter_name=document.getElementById("starter");
+			var maincourse_name=document.getElementById("maincourse");
+			var softdrink_name=document.getElementById("softdrink");
+			var starter_price=parseInt(starter_name.value);
+			var maincourse_price=parseInt(maincourse_name.value);
+			var softdrink_price=parseInt(softdrink_name.value);
+			var total=starter_price+maincourse_price+softdrink_price;
+
+			var starter_selected=starter_name.options[starter_name.selectedIndex].text;
+			var maincourse_selected=maincourse_name.options[maincourse_name.selectedIndex].text;
+			var softdrink_selected=softdrink_name.options[softdrink_name.selectedIndex].text;
+
+			selecteditem+=starter_selected+"\t \t \t"+starter_price+"\n";
+			selecteditem+=maincourse_selected+"\t \t \t"+maincourse_price+"\n";
+			selecteditem+=softdrink_selected+"\t \t \t \t"+softdrink_price+"\n";
+			selecteditem+="\n\n\nTotal Cost \t \t \t "+total;
+			document.getElementById("display").value=selecteditem;
+		}
+	</script>
+	</body>
+</html>
+
+
+
+
+
