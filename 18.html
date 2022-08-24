@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<style>
+canvas
+	{
+	border: 2px solid black;
+}
+</style>
+	</head>
+	<body>
+		<p>Click the button to create a canvas element, with a green rectangle</p>
+		<input type="button" value="Create Canvas" onclick="myFunction()">
+	<script>
+		function myFunction()
+		{
+			var x=document.createElement("canvas");
+			var etx=x.getContext("2d");
+			etx.fillStyle="#00ff00";
+			etx.fillRect(20,20,150,100);
+			document.body.appendChild(x);
+		}
+	</script>
+	</body>
+</html>
+		
