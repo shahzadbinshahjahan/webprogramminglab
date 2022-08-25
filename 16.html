@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Factorial</title>
+	<script>
+		var n=window.prompt("Enter a number : ");
+		var num=parseInt(n);
+		var fact=factorial(num);
+		document.write("<h1><center>Factorial of the number "+num+" is "+fact+"</h1></center>");
+		function factorial(num)
+		{
+			var fact=1;
+			if (num==1)
+				return 1;
+			else if (num==0)
+				return 0;
+			else if (num>1)
+			{
+				for(var i=2;i<=num;i++)
+					fact*=i;
+				return fact;
+			}
+			else
+				return "Only Positive Numbers";
+		}
+	</script>
+	</head>
+	<body bgcolor="ivory">
+	</body>
+</html>
